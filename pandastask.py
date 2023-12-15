@@ -46,4 +46,3 @@ grouped_data = df.groupby('Gender').agg({'Age': 'mean', 'Name': 'count'})
 
 # Plotting data
 df['Age'].plot(kind='hist')
-
