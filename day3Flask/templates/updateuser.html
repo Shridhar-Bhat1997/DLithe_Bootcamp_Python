@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            box-shadow:5px 5px 3px pink;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="number"]{
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        #register_submit{
+            padding:5px;
+            color:white;
+            background-color:red;
+            margin-left:120px;
+            border-radius:3px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Update User</h2>
+        <form action=" " method="post">
+            <input type="text" id="username" name="username" value={{message['username']}} required>
+            <input type="password" id="password" name="password" value={{message['password']}} required>
+            <input type="email" id="email" name="email" value={{message['email']}} required>
+            <input type="number" id="phone" name="phone" value={{message['phone']}} required>
+            <input type="text" id="address" name="address" value={{message['address']}} required>
+            <input type="text" id="city" name="city" value={{message['city']}} required>
+            <input type="text" id="state" name="state" value={{message['state']}} required>
+            <input type="text" id="country" name="country" value={{message['country']}} required>
+            <input type="text" id="postcode" name="postcode" value={{message['postcode']}} required> <br>
+            <button id="register_submit" type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Add user</title>
+</head>
+<style>
+    .container {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    button {
+        margin: 10px;
+        background-color: red;
+        border-radius: 5px;
+        color: white;
+        border-width: 0;
+        padding: 10px;
+        width: 100px;
+    }
+
+    button:hover {
+        transform: scale(1.05);
+    }
+
+    .demo{
+        height:400px;
+        width:450px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        border:2px solid black;
+        border-radius:5px;
+        margin-left:400px;
+        box-shadow:3px 3px 1px purple;
+        margin-top:50px;
+        background:radial-gradient(yellow,orange)
+    }
+
+    .demo:hover{
+        cursor:pointer;
+        transform:scale(1.2);
+    }
+
+    .demo li{
+        font-size:25px;
+    }
+</style>
+
+<body>
+    <div class="container">
+
+        <div>
+            <button onclick="window.location.href=`http://192.168.1.6:83/login`">Logout</button>
+        </div>
+        <div class="buttons">
+
+            <button
+                onclick="window.location.href=`http://192.168.1.6:83/updateuser/{{message['id']}}`">Edit</button>
+
+
+            <button
+                onclick="window.location.href=`http://192.168.1.6:83/deleteuser/{{message['id']}}`">Delete</button>
+
+        </div>
+    </div>
+    <div class="demo">
+    <h2>{{message['username'].upper()}}</h2>
+    <ul>
+        <li>ID: {{message['id']}}</li>
+        <li>Username: {{message['username']}}</li>
+        <li>Password: {{message['password']}}</li>
+        <li>Email: {{message['email']}}</li>
+        <li>Phone: {{message['phone']}}</li>
+        <li>Address: {{message['address']}}</li>
+        <li>City: {{message['city']}}</li>
+        <li>State: {{message['state']}}</li>
+        <li>Country: {{message['country']}}</li>
+        <li>Postcode: {{message['postcode']}}</li>
+
+    </ul>
+</div>
+</body>
+
+</html>
